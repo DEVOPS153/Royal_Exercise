@@ -24,7 +24,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-          docker build -t your-dockerhub-username/sample-web-app:latest .
-          docker build -t your-dockerhub-username/sample-web-app:${{ github.sha }} .
-          docker push your-dockerhub-username/sample-web-app:latest
-          docker push your-dockerhub-username/sample-web-app:${{ github.sha }}
+          docker build -t devopscloud153/sample-web-app:latest .
+          docker build -t devopscloud153/sample-web-app:${{ github.sha }} .
+          docker push devopscloud153/sample-web-app:latest
+          docker push devopscloud153/sample-web-app:${{ github.sha }}
